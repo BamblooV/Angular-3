@@ -1,0 +1,12 @@
+<span class="title"
+  >{{ item.title }}<br />
+  {{ item.price * item.quantity | currency : "USD" }}</span
+>
+<input
+  type="number"
+  min="1"
+  max="99"
+  [value]="item.quantity"
+  (input)="patchPurchase($event)"
+/>
+<button class="btn" (click)="deletePurchase()">X</button>

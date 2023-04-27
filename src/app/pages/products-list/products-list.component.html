@@ -1,0 +1,9 @@
+<app-button (click)="handleButtonClick()">В корзину</app-button>
+
+<div class="card-container">
+  <app-card
+    *ngFor="let item of items"
+    [item]="item"
+    (addToCart)="addToCart($event)"
+  ></app-card>
+</div>

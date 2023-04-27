@@ -1,0 +1,14 @@
+<app-button (click)="handleButtonClick()">К списку товаров</app-button>
+
+<div class="card-container">
+  <app-card
+    *ngFor="let item of cartItems"
+    [item]="item"
+    (deleteItem)="deletePurchase($event)"
+    (patchItem)="patchPurchase($event)"
+  ></app-card>
+  <div class="footer">
+    Итого:
+    {{ viewTotalPrice | currency : exchangeCurrency$.value : currencySymbol }}
+  </div>
+</div>

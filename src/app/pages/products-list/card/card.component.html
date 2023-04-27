@@ -1,0 +1,13 @@
+<span class="title"
+  >{{ item.title }} <br />
+  {{ item.price | currency : "USD" }}</span
+>
+<input
+  type="number"
+  min="1"
+  max="99"
+  name="quantity"
+  id="quantity"
+  [(ngModel)]="quantity"
+/>
+<button (click)="onButtonClick()" class="btn">Добавить в корзину</button>

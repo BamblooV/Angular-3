@@ -1,0 +1,6 @@
+<app-purchases-list
+  [exchangeCurrency$]="exchangeCurrency$"
+  [currencySymbol]="currencySymbol"
+  (btnClick)="handleNavigate()"
+></app-purchases-list>
+<app-form (currency)="changeCurrency($event)"></app-form>

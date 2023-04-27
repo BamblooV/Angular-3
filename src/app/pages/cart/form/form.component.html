@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <div class="control-group">
+    <label for="country">Страна: </label>
+    <select name="country" id="country" formControlName="country">
+      <option
+        *ngFor="let option of options"
+        value="{{ option.name.official }}"
+        [ngValue]="option"
+      >
+        {{ option.name.official }}
+      </option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label for="adress">Адресс доставки: </label>
+    <input id="adress" type="text" formControlName="adress" />
+  </div>
+  <div class="control-group">
+    <label for="name">Имя: </label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+  <div class="control-group">
+    <label for="email">Электронная почта: </label>
+    <input id="email" type="email" formControlName="email" />
+  </div>
+  <input type="submit" />
+</form>
